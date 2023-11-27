@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        textarea {
+            width: 100%;
+            height: 20em;
+        }
+    </style>
+  <script type="text/javascript" src="./require.js" data-main="./main.js"></script> 
+  <script>
+    // initialize manually with a list of links
+    function initPage(requirejs,env) {
+        document.getElementById('build').addEventListener('click', function (evt) {
+            requirejs.build({
+                baseUrl: '.',
+                env:env,
+                paths: {
+                    'd': 'sub/d'
+                },
+                include: ['a'],
+                out: function (text) {
+                    document.getElementById('output').value = text;
+                }
+            }).then(function (buildText) {
+                document.getElementById('buildMessages').value = buildText;
+            });
+        }, false);
+    }
+  </script>
+</head>
+<body>
+    <h1>r.js in the browser</h1>
+
+
+    <p>A test of running r.js in the browser.</p>
+
+    <p>
+        <button id="build">Build it</button>
+    </p>
+
+    <h2>Build Messages</h2>
+    <textarea id="buildMessages"></textarea>
+
+    <h2>Output</h2>
+    <textarea id="output"></textarea>
+</body>
+</html>
