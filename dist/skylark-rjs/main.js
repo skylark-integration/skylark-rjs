@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["./rjs","./build","./lang","./prim","./logger","./parse","./optimize","./pragma","./transform","./requirePatch","./commonJs","./source-map","./create-rjsapi"],function(r,e,a,i,s,t,m,n,o,c,p,u,g){"use strict";return r});
+define(["./rjs","./build","./lang","./prim","./logger","./parse","./optimize","./pragma","./transform","./requirePatch","./commonJs","./source-map"],function(r,e,i,a,m,n,o,s,t,u,c,p,g){"use strict";return r});
 //# sourceMappingURL=sourcemaps/main.js.map

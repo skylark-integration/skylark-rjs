@@ -375,10 +375,10 @@ requirejs.config({
 
 });
 
-///require(["skylark-rjs-all"], function () {
+require(["skylark-rjs-all"], function () {
   require(["skylark-rjs","tests_browser/env"], function (rjs,env) {
     if (window.initPage) {
       window.initPage(rjs,env);
     }
   });  
-///});
+});

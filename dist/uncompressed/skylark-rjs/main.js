@@ -10,8 +10,7 @@ define([
     "./transform",
     "./requirePatch",
     "./commonJs",
-    "./source-map",
-    "./create-rjsapi"
+    "./source-map"
 ],function (
     rjs,
     build,
@@ -42,7 +41,6 @@ define([
     	requirePatch,
     	commonJs,
     	sourceMap,
-        createRjsApi
     }
     */
     return rjs;
