@@ -2406,6 +2406,7 @@ define('skylark-rjs/optimize',[
                 } catch (e) {
                     var errorString = e.toString();
                     var isSyntaxError = /SyntaxError/.test(errorString);
+                    console.error(e);
                     throw new Error('Cannot uglify file: ' + fileName +
                                     '. Skipping it. Error is:\n' + errorString +
                                   (isSyntaxError ? '\n\n' + es5PlusGuidance : ''));

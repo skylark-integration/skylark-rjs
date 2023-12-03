@@ -1,5 +1,6 @@
 define(['c', 'd'], function (c, d) {
-    return {
+	var δ;
+    return δ ={
         name: 'b',
         c: c,
         d: d
