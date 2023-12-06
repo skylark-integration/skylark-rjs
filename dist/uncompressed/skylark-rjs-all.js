@@ -5,8 +5,10 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-(function(factory,globals,define,require) {
-  var isAmd = (typeof define === 'function' && define.amd),
+(function(factory,globals) {
+  var define = globals.define,
+      require = globals.require,
+      isAmd = (typeof define === 'function' && define.amd),
       isCmd = (!isAmd && typeof exports !== 'undefined');
 
   if (!isAmd && !define) {
@@ -13021,6 +13023,11 @@ define('skylark-uglifyjs/parse',[
         AST_Array,
         AST_Arrow,
         AST_Assign,
+        AST_AsyncFunction,
+        AST_AsyncDefun,
+        AST_AsyncArrow,
+        AST_AsyncGeneratorFunction,
+        AST_AsyncGeneratorDefun,
         AST_Await,
         AST_BigInt,
         AST_Binary,
@@ -15692,6 +15699,7 @@ define('skylark-uglifyjs/parse',[
         is_identifier_char,
         is_surrogate_pair_head,
         is_surrogate_pair_tail,
+        decode_escape_sequence,
         tokenizer,
         parse,
         KEYWORDS,
@@ -19035,6 +19043,7 @@ define('skylark-uglifyjs/compress',[
         JS_Parse_Error,
         parse,
         PRECEDENCE,
+        decode_escape_sequence,
         is_identifier_string,
 
         UNARY_POSTFIX 
@@ -39765,5 +39774,5 @@ define('skylark-rjs/main',[
 define('skylark-rjs', ['skylark-rjs/main'], function (main) { return main; });
 
 
-},this,define,require);
+},this);
 //# sourceMappingURL=sourcemaps/skylark-rjs-all.js.map

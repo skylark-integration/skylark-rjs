@@ -1,1 +1,1 @@
-{"version":3,"sources":["source-map.js"],"names":["define","sourcemap"],"mappings":";;;;;;;AAAAA,OAAO,CAAC,qBAAsB,SAAUC,GACpC,OAAOA,CACX,CAAC","file":"../source-map.js","sourcesContent":["define(['skylark-sourcemap'], function (sourcemap) {\n    return sourcemap;\n});\n"]}
+{"version":3,"sources":["source-map.js"],"names":["define","sourcemap"],"mappings":";;;;;;;AAAAA,QAAQ,qBAAsB,SAAUC,GACpC,OAAOA","file":"../source-map.js","sourcesContent":["define(['skylark-sourcemap'], function (sourcemap) {\n    return sourcemap;\n});\n"]}
