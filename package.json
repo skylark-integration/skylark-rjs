@@ -36,6 +36,10 @@
     "src/",
     "skins/"
   ],
+  "exports": {
+    ".": "./dist/uncompressed/skylark-rjs/main.js",
+    "./*": "./dist/uncompressed/skylark-rjs/*.js"
+  },
   "skylarkjs": {
     "directories": {
       "dependencies": "./node_modules"
