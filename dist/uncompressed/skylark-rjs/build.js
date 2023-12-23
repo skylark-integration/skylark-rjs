@@ -12,7 +12,7 @@ define([
     "./optimize",
     "./pragma",
     "./transform",
-    "./requirePatch",
+    ///"./requirePatch",
     ///"env",
     "./commonJs",
     "./source-map"
@@ -25,7 +25,7 @@ define([
     optimize,
     pragma,
     transform,
-    requirePatch,
+    ///requirePatch,
     commonJs,
     sourceMap
 
@@ -342,7 +342,7 @@ define([
             paths = config.paths;
             fs = config.env.fs;
 
-            requirePatch(config);
+            ///requirePatch(config);
 
 
             //Remove the previous build dir, in case it contains source transforms,

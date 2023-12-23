@@ -376,9 +376,9 @@ requirejs.config({
 });
 
 ///require(["skylark-rjs-all"], function () {
-  require(["skylark-rjs","tests_browser/env"], function (rjs,env) {
+  require(["skylark-rjs","skylark-rjs/requirePatch","tests_browser/env"], function (rjs,requirePatch,env) {
     if (window.initPage) {
-      window.initPage(rjs,env);
+      window.initPage(rjs,requirePatch,env);
     }
   });  
 ///});

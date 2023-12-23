@@ -10,8 +10,11 @@
   <script type="text/javascript" src="./require.js" data-main="./main.js"></script> 
   <script>
     // initialize manually with a list of links
-    function initPage(requirejs,env) {
+    function initPage(requirejs,requirePatch,env) {
         document.getElementById('build').addEventListener('click', function (evt) {
+            requirePatch(require,{
+                env
+            });
             requirejs.build({
                 baseUrl: '.',
                 env:env,

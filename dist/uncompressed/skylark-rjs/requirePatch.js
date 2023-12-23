@@ -45,7 +45,7 @@ define([
     prim.hideResolutionConflict = true;
 
     //This method should be called when the patches to require should take hold.
-    return function (config) {
+    return function (require,config) {
         if (!allowRun) {
             return;
         }
@@ -278,8 +278,9 @@ define([
                                             require._cachedDefinesRequireUrls[url] = true;
                                         }
                                     } catch (e1) {
-                                        throw new Error('Parse error using esprima ' +
-                                                        'for file: ' + url + '\n' + e1);
+                                        throw e1;
+                                        ///throw new Error('Parse error using esprima ' +
+                                        ///                'for file: ' + url + '\n' + e1);
                                     }
                                 }).then(function () {
                                     if (hasProp(context.plugins, moduleName)) {
