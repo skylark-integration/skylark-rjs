@@ -8,7 +8,7 @@ define([
     "./optimize",
     "./pragma",
     "./transform",
-    "./requirePatch",
+    ///"./requirePatch",
     "./commonJs",
     "./source-map"
 ],function (
@@ -21,7 +21,7 @@ define([
     optimize,
     pragma,
     transform,
-    requirePatch,
+   /// requirePatch,
     commonJs,
     sourceMap,
     createRjsApi

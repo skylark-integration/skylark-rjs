@@ -1,4 +1,4 @@
-requirejs.config({
+require.config({
     baseUrl : "../",
     waitSeconds : 60,
     paths: {
@@ -377,8 +377,11 @@ requirejs.config({
 
 ///require(["skylark-rjs-all"], function () {
   require(["skylark-rjs","skylark-rjs/requirePatch","tests_browser/env"], function (rjs,requirePatch,env) {
+    requirePatch(require,{
+      env
+    });
     if (window.initPage) {
-      window.initPage(rjs,requirePatch,env);
+      window.initPage(rjs,env);
     }
   });  
 ///});
