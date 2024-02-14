@@ -13081,6 +13081,7 @@ define('skylark-uglifyjs/parse',[
         AST_If,
         AST_Import,
         AST_ImportMeta,
+        AST_Infinity,
         AST_IterationStatement,
         AST_Label,
         AST_LabeledStatement,

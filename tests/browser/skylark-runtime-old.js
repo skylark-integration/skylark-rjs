@@ -2068,7 +2068,7 @@ function isFunction(it) {
                 var data = getScriptData(evt);
                 context.completeLoad(data.id);
             }
-        },
+        }
 
         /**
          * Callback for script errors.
@@ -2105,6 +2105,7 @@ function isFunction(it) {
                                          '"'), evt, [data.id]));
             }
         }
+        var config = context.config;
 
         //In the browser so use a script tag
         node = createNode(config, moduleName, url);
